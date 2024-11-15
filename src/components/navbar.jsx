@@ -22,20 +22,8 @@ export default function Navbar() {
               </div>
               <div className="hidden text-[#2b2b2b] font-semibold md:flex space-x-4">
                 {/* Add your navigation links here */}
-                <NavbarButton isMobile={false} link="/" text="HOME" />
-                <NavbarButton isMobile={false} link="/sotm" text="SOTM '24" />
-                <NavbarButton isMobile={false} link="/about" text="ABOUT US" />
-                <NavbarButton
-                  isMobile={false}
-                  link="/mapathon-keralam-osm-community-statement"
-                  text="COMMUNITY"
-                />
-                <NavbarButton isMobile={false} link="/blogs" text="BLOGS" />
-                <NavbarButton
-                  isMobile={false}
-                  link="/maintainers"
-                  text="MAINTAINERS"
-                />
+                <NavbarButton isMobile={false} link="/" text="Home" />
+                <NavbarButton isMobile={false} link="/schedule" text="Schedule" />
               </div>
               <div className="md:hidden">
                 <button
@@ -81,31 +69,10 @@ export default function Navbar() {
             <div className="absolute top-13 right-5  text-semiblod flex-col text-right w-fit justify-self-end rounded-lg bg-[#09471a] text-[#ffffff]">
               {/* Add your mobile navigation links here */}
               <div className="m-2 p-2 mr-8">
-                <NavbarButton isMobile={true} link="/" text="HOME" />
+                <NavbarButton isMobile={true} link="/" text="Home" />
               </div>
               <div className="m-2 p-2 mr-8">
-                <NavbarButton isMobile={true} link="/sotm" text="SOTM '24" />
-              </div>
-              <div className="m-2 p-2 mr-8">
-                <NavbarButton isMobile={true} link="/blogs" text="BLOGS" />
-              </div>
-              <div className="m-2 p-2 mr-8">
-                <NavbarButton isMobile={true} link="/about" text="ABOUT US" />
-              </div>
-
-              <div className="m-2 p-2 mr-8">
-                <NavbarButton
-                  isMobile={true}
-                  link="/mapathon-keralam-osm-community-statement"
-                  text="COMMUNITY"
-                />
-              </div>
-              <div className="m-2 p-2 mr-8">
-                <NavbarButton
-                  isMobile={true}
-                  link="/maintainers"
-                  text="MAINTAINERS"
-                />
+                <NavbarButton isMobile={true} link="/schedule" text="Schedule" />
               </div>
             </div>
           )}

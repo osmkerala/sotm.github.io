@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+// import { Image } from 'astro:assets';
+// import scheduleImage from '../assets/images/schedule.svg';
+
+const pageTitle = "Schedule | State of the Map Kerala 2024";
+
+const days = [
+  {
+    date: "November 16, 2024",
+    title: "Day 1 - Conference",
+    schedule: [
+      { time: "08:00 - 09:30", session: "On-site Registration", type: "registration" },
+      { time: "09:30 - 09:45", session: "Welcome Speech", speaker: "OSM Volunteer", type: "main" },
+      { time: "09:45 - 10:00", session: "Chair Addressing Gathering", speaker: "Dr. Maya S.", role: "Dean, College of Veterinary & Animal Sciences", type: "main" },
+      { time: "10:00 - 10:30", session: "Opening Ceremony: Inauguration", speaker: "CS Meenakshi", subtitle: "ഇന്ത്യൻ ഭൂപടനിർമ്മാണത്തിന്റെ വിസ്മയചരിത്രം", subtitle_en: "(The Amazing History of Indian Cartography)", type: "main" },
+      { time: "10:30 - 11:00", session: "Founder Address", speaker: "Steve Coast", role: "Founder, OpenStreetMap", type: "keynote" },
+      { time: "11:00 - 11:20", session: "Keynote Address", speaker: "Prof. N Vinod Chandra Menon", role: "Founder Member, National Disaster Management Authority (NDMA), Government of India", type: "keynote" },
+      { time: "11:20 - 11:40", session: "Tea Break and Networking", type: "break" },
+      { time: "11:40 - 12:10", session: "Report Presenting: State of the Map Kerala", speaker: "OSM Kerala Volunteers", type: "talk" },
+      { time: "12:10 - 13:00", session: "Talks about Projects", type: "talks", talks: [
+        { title: "Chooralmala Mapping", speaker: "Rajaneesh" },
+        { title: "Bird Diversity of Panchayaths in Kerala", speakers: ["Manoj Karingamadathil", "Akshay S Dinesh"], org: "MapKerala, OpenDataKerala" },
+        { title: "Map of schools in schoolwiki using Openstreetmap", speakers: ["Vijayan Rajapuram", "Ranjithsiji"], org: "KITE, Schoolwiki" }
+      ]},
+      { time: "13:00 - 13:15", session: "Group Photo", type: "break" },
+      { time: "13:15 - 14:00", session: "Lunch and Networking", type: "break" },
+      { time: "14:00 - 15:30", session: "Documentary Screening & Interaction: Jalamudra", speakers: ["Ajith Kumar (Director)", "Ajay Kuyiloor (Editor)"], type: "screening" },
+      { time: "15:30 - 16:00", session: "Lightning Talks", type: "lightning", talks: [
+        { title: "A talk of a simple analysis on place names of Kerala", speaker: "Subin Siby" },
+        { title: "Geospatial analysis of human wildlife conflict vulnerability in Wayand District", speaker: "Devika R Nair" }
+      ]},
+      { time: "16:00 - 16:30", session: "OSGeo Kerala Community Revamp", type: "community" },
+      { time: "16:30 - 17:00", session: "Wikidata Birthday Programs", type: "celebration", activities: [
+        "Introduction to Wikidata and linking it to OSM",
+        "Cake cutting and celebration"
+      ]},
+      { time: "17:00 - 17:15", session: "Tea Break", type: "break" },
+      { time: "17:00 - 18:00", session: "Talk & Panel", type: "panel", items: [
+        { title: "Sharing the stories: Panchayat Mapping", speaker: "Jaisen Nedumpala" },
+        { title: "Panel: Local Body Mapping", description: "Different Panchayat Officials" }
+      ]}
+    ]
+  },
+  {
+    date: "November 17, 2024",
+    title: "Day 2 - OSMGeoWeek",
+    schedule: [
+      { time: "09:30 - 10:00", session: "Inauguration & Inspirational Talk", type: "main", items: [
+        { title: "OSMGeoWeek 2024 Inauguration" },
+        { title: "OSM and India Community Intro", speaker: "Arun Ganesh" }
+      ]},
+      { time: "10:00 - 11:00", session: "Panel: Use of OpenStreetMap in Industry", type: "panel", panelists: [
+        { name: "Thiagarajan", role: "Group Product Manager, Zepto" },
+        { name: "Arun Ganesh", role: "Mapbox, OSM India" },
+        { name: "Ark Arjun", role: "Co-founder Geominds, OSM Kerala" }
+      ]},
+      { time: "11:10 - 11:20", session: "Tea Break and Networking", type: "break" },
+      { time: "11:20 - 11:40", session: "Why should someone contribute to OSM", speaker: "ARK Arjun", type: "talk" },
+      { time: "11:40 - 13:00", session: "Birds of Feathers", type: "bof" },
+      { time: "13:00 - 14:00", session: "Lunch and Networking", type: "break" }
+    ]
+  },
+  {
+    date: "November 17, 2024",
+    title: "Day 2 - Workshops",
+    schedule: [
+      { time: "11:20 - 13:00", session: "Dedicated Mapping Workshop for Indigenous People of Wayanad", facilitators: ["Athul", "Arun"], type: "workshop" },
+      { time: "14:00 - 17:00", session: "OSM Mapping", facilitators: ["Kelvin", "Arjun", "Jaison"], type: "workshop" },
+      { time: "14:00 - 17:00", session: "Wikidata Workshop", facilitators: ["Ranjith Siji", "Jinoy"], type: "workshop" },
+      { time: "17:00 - 18:00", session: "Tea Break and Networking", type: "break" }
+    ]
+  }
+];
+---
+
+<Layout title={pageTitle}>
+  <!-- Hero Section -->
+  <div class="relative isolate bg-[#033B4A]">
+    <div
+      class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+      aria-hidden="true"
+    >
+    </div>
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="mx-auto flex max-w-2xl flex-col gap-16 px-6 py-10 sm:py-10 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:gap-x-8">
+        <div class="w-full lg:w-1/2 flex-auto">
+          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            Schedule
+          </h1>
+          <p class="mt-6 text-lg leading-8 text-gray-300">
+            Three days of mapping, learning, and community building at KVASU Pookode, Wayanad.
+          </p>
+        </div>
+        <div class="w-full lg:w-1/2 flex-auto">
+         <!-- <Image 
+            src={scheduleImage} 
+            alt="Schedule Illustration"  
+            class="w-full h-auto"
+          /> --!>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Schedule Section -->
+  <div class="bg-white py-12">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="space-y-8">
+        {days.map((day) => (
+          <section class="border border-gray-200 rounded-lg overflow-hidden">
+            <div class="px-6 py-4 bg-[#033B4A] text-white">
+              <h2 class="text-2xl font-bold">{day.title}</h2>
+              <p class="text-gray-300">{day.date}</p>
+            </div>
+
+            <div class="divide-y divide-gray-200">
+              {day.schedule.map((item) => (
+                <div class={`px-6 py-4 ${item.type === 'break' ? 'bg-gray-50' : ''} hover:bg-gray-50 transition-colors duration-150`}>
+                  <div class="md:grid md:grid-cols-6 md:gap-6">
+                    <div class="md:col-span-1">
+                      <time class="text-sm font-medium text-gray-600">{item.time}</time>
+                    </div>
+                    <div class="md:col-span-5 mt-2 md:mt-0">
+                      <h3 class={`font-bold text-lg ${item.type === 'break' ? 'text-gray-600 italic' : 'text-[#033B4A]'}`}>
+                        {item.session}
+                      </h3>
+                      
+                      {item.speaker && (
+                        <div class="text-gray-600 mt-1">{item.speaker}</div>
+                      )}
+                      
+                      {item.role && (
+                        <div class="text-gray-500 text-sm mt-1">{item.role}</div>
+                      )}
+                      
+                      {item.subtitle && (
+                        <div class="text-gray-600 mt-1">
+                          <div class="font-ml">{item.subtitle}</div>
+                          {item.subtitle_en && <div class="text-sm">{item.subtitle_en}</div>}
+                        </div>
+                      )}
+                      
+                      {item.talks && (
+                        <ul class="mt-2 space-y-2">
+                          {item.talks.map((talk) => (
+                            <li>
+                              <div class="text-[#033B4A]">{talk.title}</div>
+                              <div class="text-gray-600 text-sm">
+                                {talk.speakers ? talk.speakers.join(', ') : talk.speaker}
+                                {talk.org && ` (${talk.org})`}
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      
+                      {item.panelists && (
+                        <div class="mt-2 space-y-1">
+                          {item.panelists.map((panelist) => (
+                            <div class="text-gray-600">
+                              {panelist.name} - <span class="text-gray-500">{panelist.role}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      
+                      {item.facilitators && (
+                        <div class="text-gray-600 mt-1">
+                          Facilitators: {item.facilitators.join(', ')}
+                        </div>
+                      )}
+                      
+                      {item.activities && (
+                        <ul class="mt-2 list-disc list-inside text-gray-600">
+                          {item.activities.map((activity) => (
+                            <li>{activity}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>
