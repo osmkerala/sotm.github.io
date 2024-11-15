@@ -12,14 +12,6 @@ export default function Navbar() {
         <div className="border-2  border-[#E6E9ED];">
           <div className="m-2 p-2 container mx-auto">
             <div className="flex justify-between items-center">
-              <div className="flex items-center">
-                <div className=" pr-4">
-                  <img src="/osm_logo/osm-logo@3x.svg" alt="logo" width={70} />
-                </div>
-                <a href="/">
-                  <div className="text-3xl font-bold">OSM Kerala</div>
-                </a>
-              </div>
               <div className="hidden text-[#2b2b2b] font-semibold md:flex space-x-4">
                 {/* Add your navigation links here */}
                 <NavbarButton isMobile={false} link="/" text="Home" />
