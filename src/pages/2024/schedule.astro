@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 // import { Image } from 'astro:assets';
-// import scheduleImage from '../assets/images/schedule.svg';
+// import scheduleImage from '../../assets/images/schedule.svg';
 
 const pageTitle = "Schedule | State of the Map Kerala 2024";
 
@@ -93,9 +93,9 @@ const days = [
           </p>
         </div>
         <div class="w-full lg:w-1/2 flex-auto">
-         <!-- <Image 
-            src={scheduleImage} 
-            alt="Schedule Illustration"  
+         <!-- <Image
+            src={scheduleImage}
+            alt="Schedule Illustration"
             class="w-full h-auto"
           /> --!>
         </div>
@@ -125,22 +125,22 @@ const days = [
                       <h3 class={`font-bold text-lg ${item.type === 'break' ? 'text-gray-600 italic' : 'text-[#033B4A]'}`}>
                         {item.session}
                       </h3>
-                      
+
                       {item.speaker && (
                         <div class="text-gray-600 mt-1">{item.speaker}</div>
                       )}
-                      
+
                       {item.role && (
                         <div class="text-gray-500 text-sm mt-1">{item.role}</div>
                       )}
-                      
+
                       {item.subtitle && (
                         <div class="text-gray-600 mt-1">
                           <div class="font-ml">{item.subtitle}</div>
                           {item.subtitle_en && <div class="text-sm">{item.subtitle_en}</div>}
                         </div>
                       )}
-                      
+
                       {item.talks && (
                         <ul class="mt-2 space-y-2">
                           {item.talks.map((talk) => (
@@ -154,7 +154,7 @@ const days = [
                           ))}
                         </ul>
                       )}
-                      
+
                       {item.panelists && (
                         <div class="mt-2 space-y-1">
                           {item.panelists.map((panelist) => (
@@ -164,13 +164,13 @@ const days = [
                           ))}
                         </div>
                       )}
-                      
+
                       {item.facilitators && (
                         <div class="text-gray-600 mt-1">
                           Facilitators: {item.facilitators.join(', ')}
                         </div>
                       )}
-                      
+
                       {item.activities && (
                         <ul class="mt-2 list-disc list-inside text-gray-600">
                           {item.activities.map((activity) => (

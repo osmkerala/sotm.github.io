@@ -1,6 +1,6 @@
 ---
 // src/pages/sotm2024/index.astro
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 
 const meta = {
   title: "State of the Map Kerala 2024",
@@ -163,7 +163,7 @@ const socials = [
     <meta name="description" content={meta.description} />
     <meta name="author" content={meta.eventDetails.organizer} />
     <meta name="keywords" content="OpenStreetMap, Kerala, mapping, SOTM, conference, GIS, open data, Wayanad, OSM" />
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href={meta.url} />
 
@@ -189,7 +189,7 @@ const socials = [
     <meta name="twitter:title" content={meta.title} />
     <meta name="twitter:description" content={meta.description} />
     <meta name="twitter:image" content={meta.image} />
-    
+
     <!-- Schema.org Event markup -->
     <script type="application/ld+json">
       {
@@ -235,12 +235,12 @@ const socials = [
     <meta name="theme-color" content="#16a34a" />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Apple specific -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="SOTM Kerala 2024" />
-    
+
     <!-- Microsoft Tiles -->
     <meta name="msapplication-TileColor" content="#16a34a" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
@@ -261,13 +261,13 @@ const socials = [
         </div>
       </div>
       <div class="flex flex-wrap gap-4">
-        <a 
+        <a
           href="https://makemypass.com/state-of-the-map-kerala"
           class="bg-white text-green-600 px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all"
         >
           Register Now
         </a>
-        <a 
+        <a
           href="https://wiki.openstreetmap.org/wiki/OSM_Kerala_Community_Meetup_2024"
           class="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-all"
         >
@@ -282,7 +282,7 @@ const socials = [
     <section class="mb-16">
       <h2 class="text-3xl font-bold mb-6 text-center">About the Event</h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-12">
-        Join us for two exciting days filled with learning, sharing, and collaboration as we work together 
+        Join us for two exciting days filled with learning, sharing, and collaboration as we work together
         to shape the future of mapping in Kerala.
       </p>
     </section>
@@ -307,7 +307,7 @@ const socials = [
         <div class="bg-white p-6 rounded-lg shadow-sm">
           <h3 class="text-xl font-semibold mb-2">College of Veterinary Science</h3>
           <p class="text-gray-600 mb-4">KVASU Pookode, Lakkidi P.O., Wayanad, Kerala 673576</p>
-          <a 
+          <a
             href="https://www.openstreetmap.org/?mlat=11.5351&mlon=76.0211#map=17/11.5351/76.0211"
             class="text-green-600 hover:underline inline-flex items-center gap-2"
             target="_blank"
@@ -316,7 +316,7 @@ const socials = [
           </a>
         </div>
         <div class="h-[400px] rounded-lg overflow-hidden">
-          <iframe 
+          <iframe
             class="w-full h-full"
             src="https://www.openstreetmap.org/export/embed.html?bbox=76.01699829101564%2C11.53239958159262%2C76.02523803710939%2C11.537835922501685&layer=mapnik&marker=11.535117612391382%2C76.02111816406251"
           ></iframe>
@@ -327,14 +327,14 @@ const socials = [
     <!-- Sponsors -->
     <section class="mb-16">
       <h2 class="text-3xl font-bold mb-12 text-center">Our Sponsors</h2>
-      
+
       <!-- Platinum -->
       <div class="mb-12">
         <h3 class="text-lg font-semibold mb-6 text-center text-gray-600">Platinum Sponsor</h3>
         <div class="flex justify-center">
           {sponsors.platinum.map(sponsor => (
             <div class="flex flex-col items-center">
-              <a 
+              <a
                 href={sponsor.url}
                 class="bg-slate-100 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center mb-2"
                 target="_blank"
@@ -353,7 +353,7 @@ const socials = [
         <div class="flex justify-center">
           {sponsors.silver.map(sponsor => (
             <div class="flex flex-col items-center">
-              <a 
+              <a
                 href={sponsor.url}
                 class="bg-slate-100 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center mb-2"
                 target="_blank"
@@ -372,7 +372,7 @@ const socials = [
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {sponsors.bronze.map(sponsor => (
             <div class="flex flex-col items-center">
-              <a 
+              <a
                 href={sponsor.url}
                 class="bg-slate-100 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center mb-2"
                 target="_blank"
@@ -391,7 +391,7 @@ const socials = [
         <div class="flex justify-center">
           {organizingPartners.map(partner => (
             <div class="flex flex-col items-center">
-              <a 
+              <a
                 href={partner.url}
                 class="bg-slate-100 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center mb-2"
                 target="_blank"
@@ -408,7 +408,7 @@ const socials = [
         <div class="flex justify-center gap-8">
           {facilitators.map(partner => (
             <div class="flex flex-col items-center">
-              <a 
+              <a
                 href={partner.url}
                 class="bg-slate-100 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center mb-2"
                 target="_blank"
@@ -426,7 +426,7 @@ const socials = [
         <div class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
           {communityPartners.map(partner => (
             <div class="flex flex-col items-center">
-              <a 
+              <a
                 href={partner.url}
                 class="bg-slate-100 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center mb-2"
                 target="_blank"
@@ -445,7 +445,7 @@ const socials = [
       <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
       <div class="flex justify-center gap-8">
         {socials.map(social => (
-          <a 
+          <a
             href={social.url}
             class="text-gray-600 hover:text-green-600 transition-colors flex items-center gap-2"
             target="_blank"

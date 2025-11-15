@@ -14,8 +14,12 @@ export default function Navbar() {
             <div className="flex justify-between items-center">
               <div className="hidden text-[#2b2b2b] font-semibold md:flex space-x-4">
                 {/* Add your navigation links here */}
-                <NavbarButton isMobile={false} link="/" text="Home" />
-                <NavbarButton isMobile={false} link="/schedule" text="Schedule" />
+                <NavbarButton isMobile={false} link="/2024" text="Home" />
+                <NavbarButton
+                  isMobile={false}
+                  link="/2024/schedule"
+                  text="Schedule"
+                />
               </div>
               <div className="md:hidden">
                 <button
@@ -64,7 +68,11 @@ export default function Navbar() {
                 <NavbarButton isMobile={true} link="/" text="Home" />
               </div>
               <div className="m-2 p-2 mr-8">
-                <NavbarButton isMobile={true} link="/schedule" text="Schedule" />
+                <NavbarButton
+                  isMobile={true}
+                  link="/2024/schedule"
+                  text="Schedule"
+                />
               </div>
             </div>
           )}
