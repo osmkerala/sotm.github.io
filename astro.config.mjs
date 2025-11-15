@@ -1,11 +1,16 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
 
 import mdx from "@astrojs/mdx";
 
+import tailwindcss from "@tailwindcss/vite";
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://osmkerala.github.io",
-  integrations: [react(), tailwind(), mdx()]
+  site: "https://kerala.stateofthemap.in",
+  integrations: [react(), mdx()],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
